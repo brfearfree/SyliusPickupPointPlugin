@@ -81,7 +81,7 @@ final class OmnivaProvider extends Provider
         $pickupPoint = $this->pickupPointFactory->createNew();
 
         Assert::isInstanceOf($pickupPoint, PickupPointInterface::class);
-        if(isSet($one['ZIP'])){
+        if(isSet($parcelShop['ZIP'])){
             $pickupPoint->setCode(new PickupPointCode($parcelShop['ZIP'], $this->getCode(), $parcelShop['A0_NAME']));
             $pickupPoint->setName($parcelShop['NAME']);
             $pickupPoint->setAddress($parcelShop['A5_NAME'] . ' ' .$parcelShop['A6_NAME'] .' ' .$parcelShop['A7_NAME']);
