@@ -20,6 +20,7 @@ final class SetonoSyliusPickupPointExtensionTest extends AbstractExtensionTestCa
                 'dao' => false,
                 'gls' => false,
                 'post_nord' => false,
+                'omniva' => false,
             ],
         ];
     }

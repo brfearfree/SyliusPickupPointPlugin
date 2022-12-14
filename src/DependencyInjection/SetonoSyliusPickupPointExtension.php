@@ -74,5 +74,9 @@ final class SetonoSyliusPickupPointExtension extends AbstractResourceExtension
 
             $loader->load('services/providers/post_nord.xml');
         }
+
+        if ($config['providers']['omniva']) {
+            $loader->load('services/providers/omniva.xml');
+        }
     }
 }
