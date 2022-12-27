@@ -9,7 +9,7 @@ use Webmozart\Assert\Assert;
 
 class PickupPoint implements PickupPointInterface
 {
-    protected ?int $id;
+    protected ?int $id = null;
 
     protected ?PickupPointCode $code = null;
 

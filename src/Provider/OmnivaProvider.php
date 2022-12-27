@@ -88,8 +88,8 @@ final class OmnivaProvider extends Provider
             $pickupPoint->setZipCode($parcelShop['ZIP']);
             $pickupPoint->setCity($parcelShop['A2_NAME']);
             $pickupPoint->setCountry($parcelShop['A1_NAME']);
-            $pickupPoint->setLatitude((float) $parcelShop['X_COORDINATE']);
-            $pickupPoint->setLongitude((float) $parcelShop['Y_COORDINATE']);
+            $pickupPoint->setLatitude((float) $parcelShop['Y_COORDINATE']);
+            $pickupPoint->setLongitude((float) $parcelShop['X_COORDINATE']);
         }
 
         return $pickupPoint;
