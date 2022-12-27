@@ -16,6 +16,8 @@ final class PickupPointCode
 
     private string $provider;
 
+    public ?string $code = null;
+
     /**
      * Some providers will only have unique ids per country
      * hence we need the country to make it completely unique in these cases
@@ -60,6 +62,9 @@ final class PickupPointCode
 
     public function __toString(): string
     {
+        return $this->getValue();
+    }
+    public function getCode(): ?string{
         return $this->getValue();
     }
 
