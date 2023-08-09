@@ -38,6 +38,22 @@ final class OmnivaProvider extends Provider
         }
     }
 
+    public function findPickupPointByCode(string $code): ?PickupPointInterface
+    {
+        $one = [];
+        if($parcelShops = $this->retrieveParcelShops('lv')){
+            foreach ($parcelShops as $item) {
+                $pickUpPintCode = new PickupPointCode($item['ZIP'], $this->getCode(), $item['A0_NAME']);
+                if((string)$pickUpPintCode === $code){
+                    $one = $item;
+                    break;
+                }
+            }
+        }
+        return $this->transform($one);
+    }
+
+
     public function findPickupPoint(PickupPointCode $code): ?PickupPointInterface
     {
         $one = [];
